@@ -17,8 +17,8 @@
   
   "primero tengo que ver los cabezales si son igules, si no lo son encontrar el menor"
   "con el map first veo el cabezal de cada secuencia"
- (if (apply =(map first seqs))
-   (first(map first seqs))
+ (if (apply =(map first seqs))"pongo map first para tomar los primeros elementos de cada lista, luego le aplico apply para que cada elemento resultante de la lista (obtenida por map)sea un parametro y lo comparo si son igualess"
+   (first(map first seqs)) "si se cumple la condicion , que son iguales todas las cabeceras de las listas, elijo el primero y lo imprimo(ej de (1 1 1) queda 1"
    (range 10)))
       
 

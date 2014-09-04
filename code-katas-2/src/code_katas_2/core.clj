@@ -17,8 +17,9 @@
   
   "primero tengo que ver los cabezales si son igules, si no lo son encontrar el menor"
   "con el map first veo el cabezal de cada secuencia"
- (map first seqs))
-  
+ (if (apply =(map first seqs))
+   (first(map first seqs))
+   (range 10)))
       
 
 

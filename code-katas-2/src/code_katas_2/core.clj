@@ -21,7 +21,7 @@
  (if (apply =(map first seqs))"pongo map first para tomar los primeros elementos de cada lista, luego le aplico apply para que cada elemento resultante de la lista (obtenida por map)sea un parametro y lo comparo si son igualess"
   (first(map first seqs))"si se cumple la condicion , que son iguales todas las cabeceras de las listas, elijo el primero y lo imprimo(ej de (1 1 1) queda 1"
   
-  (drop 1(take 1(sort(map first seqs))))))"else: ordeno los elementos de la lista con sort, tomo el primero(el menor de la lista) y lo borro"
+  (recur((drop 1(take 1(sort(map first seqs))))))))"else: ordeno los elementos de la lista con sort, tomo el primero(el menor de la lista) y lo borro"
 
 
 (defn intercalar
@@ -30,7 +30,13 @@
    que cumplan el predicado"
   [predicado valor secuencia]
     "recibe funcion elemento a intercalar y lista"
-  
+    
+    (cons(first secuencia)"concateno el primero de la secuncia"
+         (if (predicado (rest secuencia)(valor))"si se cumple el predicado(funcion) entre el resto de secuencia y valor"
+           (cons valor 
+ 
+
+
   
   )
 

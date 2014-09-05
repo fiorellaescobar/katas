@@ -48,4 +48,8 @@
    La funcion debe aceptar una secuencia inicial de numeros, y devolver una secuencia infinita de compresiones, donde
    cada nuevo elemento es el elemento anterior comprimido."
   [secuencia]
+  
+ (if (apply =(first secuencia))
+   (println "si")
+   (println "no")))
   )
